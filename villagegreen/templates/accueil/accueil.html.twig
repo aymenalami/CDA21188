@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Village Green{% endblock %}
+
+{% block body %}
+
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	</div>
+	<div class="carousel-inner">
+		<div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')">
+			<div class="carousel-caption">
+				<h5>Offrez vous une guitare Fender</h5>
+				<p>Guitare accoustique ze32 en exclusivité chez Village Green pour vous!</p>
+			</div>
+		</div>
+		<div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1530288782965-fbad40327074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')">
+			<div class="carousel-caption">
+				<h5>Large choix de disque vynil</h5>
+				<p>Site numéro 1 dans la vente de vynil. Ne cherchez plus, commandez.</p>
+			</div>
+		</div>
+		<div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1514119412350-e174d90d280e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')">
+			<div class="carousel-caption">
+				<h5>Cours de solfege</h5>
+				<p>Profitez de nos cours pour expertiser votre art.</p>
+			</div>
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+<div class="container">
+    <div class="row pt-3">
+	<h1 class="fw-light text-center text-lg-start mt-4 mb-0" id="titre">Nos catégories</h1>
+	<hr class="mt-2 mb-5" id="titre">
+    {% for row in categories %}
+        <div class="col-3 p-0  border border-dark">
+            <a href="{{path("categories",{id:row.id})}}"><img class="w-100" src="/assets/img/{{row.image}}" height="200"></a>
+        </div>
+     {% endfor %}
+    </div>
+</div>
+<hr class="mt-2 mb-5">
+	
+	</div>
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <h1 class="fw-light" id="titre">
+                Nos meilleures ventes
+            </h1>
+            <div>
+      <hr class="mt-2 mb-5" id="titre">
+</div>
+
+            <hr>
+                <img class="img-fluid" src="/assets/img/TVguitare.png" id="top_guitare">
+                <img class="img-fluid" src="/assets/img/TVpiano.png" id="top_piano">
+                <img class="img-fluid" src="/assets/img/TVsaxo.png" id="top_saxo">
+        </div>
+
+        <div class="col-5">
+            <h1 class="fw-light" id="titre">
+                Nos partenaires
+            </h1>
+            <div>
+      <hr class="mt-2 mb-5" id="titre">
+</div>
+
+            <hr>
+                <img class="img-fliud" src="/assets/img/partenaire.png" id="partenaires">
+        </div>
+
+</div>
+
+<div>
+      <hr class="mt-4 mb-5" id="titre">
+</div>
+
+<div class="container">
+    <div class="row">
+    <img ="img-fluid" src="assets/img/banniere.png">
+</div>
+</div>
+
+<footer>
+<div class="container">
+    <div class="row">
+    <img ="img-fluid" src="assets/img/footer.png">
+</div>
+</div>
+</footer>
+
+{% endblock %}
+

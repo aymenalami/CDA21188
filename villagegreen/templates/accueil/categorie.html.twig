@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+ {% block title %}VG-Catégories{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br class="mt-2 mb-5" id="titre">
+             <h1 id="titre">
+                Détails de
+             </h1>
+                    <hr class="mt-2 mb-5" id="titre">
+            </div>
+        </div>
+
+
+  <div class="row">
+ 
+    {% for row in SousCat %}
+
+
+
+
+    <div class="col-3 p-0">
+      <div class="card h-100">
+        <a href="{{path("produits",{id:row.id})}}"><img class="card-img-top w-100" src="/assets/img/{{row.image}}" alt="{{row.name}}" height="285"></a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
